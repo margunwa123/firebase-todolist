@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/head') -%>
+  <body class="bg-success">
+    <div class="container py-5">
+      <h1 class="text-center text-white display-4 font-weight-bold">
+        Todolist App
+      </h1>
+      <form class="form d-flex" action="/api/todo" method="POST">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          placeholder="Todo name"
+        />
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      <div class="container-fluid m-0 p-0">
+        <div class="row">
+          <% todos.forEach((todo) => { %>
+          <div class="col-4">
+            <!-- prettier-ignore -->
+            <%- include('../components/todo', {todo}) %>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

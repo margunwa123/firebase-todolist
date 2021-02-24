@@ -30,3 +30,6 @@ benchmarks/graphs
 
 # distribution file
 dist
+
+#firebase
+serviceAccountKey.json
